@@ -34,6 +34,9 @@ public class NoteController {
 	public void toOpenFile(){
 		FileChooser fileChooser = new FileChooser();
 		fileChooser.setTitle("打开文件");
+		if(MainWindow.oldFile != null){
+			fileChooser.setInitialDirectory(MainWindow.oldFile.getParentFile());
+		}
 		File file = fileChooser.showOpenDialog(MainWindow.stage);
 		if(file != null){
 			openFile(file);
