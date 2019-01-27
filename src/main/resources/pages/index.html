@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh" style="height:100%">
+    <head>
+        <meta charset="utf-8" />
+        <title>MDNotePad</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/editormd.css" />   
+          
+    </head>
+    <body style="height:100%">
+        <div id="layout" style="height:calc(100% - 20px);overflow: hidden;">
+            <div id="test-editormd"></div>
+        </div>
+        <div class="footer">
+            
+            <span class="encode" onselectstart="return false;" id="encode">GB2312</span>
+        </div>
+        <div class="chooseEncode" onselectstart="return false;" id="chooseEncode" style="display: none">
+            <ul>
+                <li onclick="changeEncode('GB2312')">GB2312</li>
+                <li onclick="changeEncode('GBK')">GBK</li>
+                <li onclick="changeEncode('ASCII')">ASCII</li>
+                <li onclick="changeEncode('ISO-8859-1')">ISO-8859-1</li>
+                <li onclick="changeEncode('UTF-8')">UTF-8</li>
+                <li onclick="changeEncode('UTF-16')">UTF-16</li>
+                <li onclick="changeEncode('UTF-16BE')">UTF-16BE</li>
+                <li onclick="changeEncode('UTF-16LE')">UTF-16LE</li>
+                <li onclick="changeEncode('Unicode')">Unicode</li>
+            </ul>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/editormd.js"></script>  
+        <script src="js/index.js"></script> 
+    </body>
+</html>
